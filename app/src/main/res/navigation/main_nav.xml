@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/westernFragment">
+    <fragment
+        android:id="@+id/westernFragment"
+        android:name="com.mubassyir.complexui.WesternFragment"
+        android:label="fragment_western"
+        tools:layout="@layout/fragment_western" />
+    <fragment
+        android:id="@+id/nusantaraFragment"
+        android:name="com.mubassyir.complexui.fragment.NusantaraFragment"
+        android:label="NusantaraFragment"
+        tools:layout="@layout/fragment_nusantara"/>
+</navigation>

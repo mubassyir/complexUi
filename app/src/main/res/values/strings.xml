@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ComplexUi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_food">Food</string>
+    <string name="tab_beverage">Beverage</string>
+    <string name="tab_3">Third Tab</string>
+    <string name="fab_desc">Button to start new Activity</string>
+    <string name="western">Western</string>
+    <string name="local">Local</string>
+    <string name="under_construction_page">Sorry the page is underconstruction</string>
+</resources>
