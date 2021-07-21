@@ -10,16 +10,14 @@
         app:tabGravity="fill"
         app:tabMode="fixed"
         app:tabMaxWidth="0dp"
-        app:tabIndicatorColor="@color/purple_500"
+        android:background="@color/purple_500"
+        app:tabTextColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
         app:tabIndicatorHeight="5dp"
-        android:background="#dddddd"
         app:tabTextAppearance="@style/CustomTabText"
         android:layout_height="60dp" />
-
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
-
 </LinearLayout>

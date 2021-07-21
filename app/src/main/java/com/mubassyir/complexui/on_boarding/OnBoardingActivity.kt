@@ -1,9 +1,12 @@
 package com.mubassyir.complexui.on_boarding
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.viewpager2.widget.ViewPager2
+import com.mubassyir.complexui.MainActivity
 import com.mubassyir.complexui.R
 import com.mubassyir.complexui.adapter.OnBoardingAdapter
 import com.mubassyir.complexui.databinding.ActivityOnBoardingBinding
@@ -27,24 +30,32 @@ class OnBoardingActivity : AppCompatActivity() {
         val onBoardingAdapter = OnBoardingAdapter(this, numberOfScreens)
         binding.onBoardingViewPager.adapter = onBoardingAdapter
         binding.onBoardingViewPager.registerOnPageChangeCallback(onBoardingPageChangeCallback)
+
+        binding.btnSkip.setOnClickListener {
+            Intent(this, MainActivity::class.java).let{
+                startActivity(it)
+                finish()
+            }
+        }
     }
 
     private fun updateCircleMarker(binding: ActivityOnBoardingBinding, position: Int) {
         when (position) {
             0 -> {
-                binding.onBoardingInitialCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_red_circle, null);
-                binding.onBoardingMiddleCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null);
-                binding.onBoardingLastCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null);
+                binding.onBoardingInitialCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_red_circle, null)
+                binding.onBoardingMiddleCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null)
+                binding.onBoardingLastCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null)
             }
             1 -> {
-                binding.onBoardingInitialCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null);
-                binding.onBoardingMiddleCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_red_circle, null);
-                binding.onBoardingLastCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null);
+                binding.onBoardingInitialCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null)
+                binding.onBoardingMiddleCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_red_circle, null)
+                binding.onBoardingLastCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null)
             }
             2 -> {
-                binding.onBoardingInitialCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null);
-                binding.onBoardingMiddleCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null);
-                binding.onBoardingLastCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_red_circle, null);
+                binding.onBoardingInitialCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null)
+                binding.onBoardingMiddleCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_gray_circle, null)
+                binding.onBoardingLastCircle.background = ResourcesCompat.getDrawable(resources, R.drawable.bg_red_circle, null)
+                binding.btnSkip.visibility = View.VISIBLE
             }
         }
     }

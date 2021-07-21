@@ -4,6 +4,23 @@ import com.mubassyir.complexui.R
 import com.mubassyir.complexui.model.Food
 
 object DummyData {
+
+    fun onBoardingMessages(): ArrayList<String> {
+        val onBoardingMessages =ArrayList<String>()
+        onBoardingMessages.add("Simple UI design make you easy to find anything")
+        onBoardingMessages.add("Various kind of F&B that u can enjoy")
+        onBoardingMessages.add("Enjoy just from your finger")
+        return onBoardingMessages
+    }
+
+    fun onBoardingTitles(): ArrayList<String> {
+        val onBoardingTitles = ArrayList<String>()
+        onBoardingTitles.add("Simple")
+        onBoardingTitles.add("Discover")
+        onBoardingTitles.add("Enjoy")
+        return onBoardingTitles
+    }
+
     fun westernFood(): ArrayList<Food> {
         val listFood = ArrayList<Food>()
         listFood.add(Food(R.drawable.food_beaf_steak, "Beaf Steak"))

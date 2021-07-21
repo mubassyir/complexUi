@@ -8,6 +8,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.mubassyir.complexui.R
+import com.mubassyir.complexui.data.DummyData
 import com.mubassyir.complexui.databinding.FragmentOnBoardingBinding
 
 class OnBoardingFragment : Fragment() {
@@ -22,9 +23,9 @@ class OnBoardingFragment : Fragment() {
     private lateinit var binding: FragmentOnBoardingBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         binding = FragmentOnBoardingBinding.inflate(inflater, container, false)
         return binding.root
@@ -32,16 +33,8 @@ class OnBoardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val position = requireArguments().getInt(ARG_POSITION)
-        val onBoardingTitles = ArrayList<String>()
-        onBoardingTitles.add("Simple")
-        onBoardingTitles.add("Discover")
-        onBoardingTitles.add("Enjoy")
-
-       val onBoardingMessages =ArrayList<String>()
-        onBoardingMessages.add("Simple UI design make you easy to find anything")
-        onBoardingMessages.add("Various kind of F&B that u can enjoy")
-        onBoardingMessages.add("Enjoy just from your finger")
-
+        val onBoardingTitles = DummyData.onBoardingTitles()
+        val onBoardingMessages = DummyData.onBoardingMessages()
         val onBoardingImages = getOnBoardAssetsLocation()
         with(binding) {
             activity?.let {
