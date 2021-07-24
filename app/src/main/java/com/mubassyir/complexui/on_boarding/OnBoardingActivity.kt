@@ -13,12 +13,13 @@ import com.mubassyir.complexui.databinding.ActivityOnBoardingBinding
 
 class OnBoardingActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityOnBoardingBinding
+
     private var onBoardingPageChangeCallback = object : ViewPager2.OnPageChangeCallback() {
         override fun onPageSelected(position: Int) {
             updateCircleMarker(binding, position)
         }
     }
-    private lateinit var binding: ActivityOnBoardingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

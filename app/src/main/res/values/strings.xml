@@ -15,6 +15,7 @@
     <string name="cd_splash_screen">image for splash screen</string>
     <string name="lets_get_start">Lets get Start</string>
     <string name="skip">Skip</string>
+    <string name="food_name">Food Name</string>
 
     <string-array name="on_boarding_titles">
         <item>On Boarding Title 1</item>

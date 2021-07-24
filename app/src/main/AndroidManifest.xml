@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ComplexUi">
-        <activity android:name=".NewBeverageActivity"></activity>
+        <activity android:name=".NewFoodActivity"></activity>
+        <activity android:name=".NewBeverageActivity" />
         <activity android:name=".NewFoodActivty" />
         <activity
             android:name=".on_boarding.OnBoardingActivity"

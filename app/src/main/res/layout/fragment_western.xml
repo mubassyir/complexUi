@@ -10,11 +10,9 @@
         app:tabGravity="fill"
         app:tabMode="fixed"
         app:tabMaxWidth="0dp"
-        android:background="@color/purple_500"
+        android:background="@color/amber_900"
+        app:tabIndicatorColor="@color/white"
         app:tabTextColor="@color/white"
-        app:tabSelectedTextColor="@color/white"
-        app:tabIndicatorHeight="5dp"
-        app:tabTextAppearance="@style/CustomTabText"
         android:layout_height="60dp" />
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
